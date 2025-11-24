@@ -51,8 +51,6 @@ function Index({ characters }) {
             
             <h2 className='text-xl my-4 font-bold'>Rick and Morty Characters</h2>
 
-            ---
-
             {/* Conditionally render content */}
             {noResults && (
                 <div className='text-red-500 font-medium p-4 border border-red-300 rounded-md'>
@@ -70,6 +68,9 @@ function Index({ characters }) {
                                 href={`/rickandmorty/${post.id}`}
                                 className='font-medium'
                             >{post.name}</Link></h3> 
+                            <div>
+                              <img src={post.image} alt={post.name} className='w-20 h-20 rounded-full'/>
+                            </div>
                             <small>{post.status}</small>
                             <div className='text-green-600'>
                                 <small className='text-green-500'>
