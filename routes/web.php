@@ -43,3 +43,7 @@ Route::prefix('jobs')->group(function () {
     Route::get("/edit/{id}", [App\Http\Controllers\JobsController::class, "edit"])->name("jobs.update");
     Route::post("/update/{id}", [App\Http\Controllers\JobsController::class, "update"])->name("jobs.edit");
 });
+
+Route::prefix('rickandmorty')->group(function () {
+    Route::get('/', [App\Http\Controllers\RickAndMortyController::class, 'index'])->name('rickandmorty.index');
+});
